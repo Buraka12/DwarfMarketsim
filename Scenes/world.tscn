@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhwl8lyksx737"]
+
+[ext_resource type="PackedScene" uid="uid://un0y14wnyj4r" path="res://Scenes/player.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://btek8uapnwo1g" path="res://Scenes/cargobox.tscn" id="2_go701"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yp4wr"]
+albedo_color = Color(0.544, 1, 0.52, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a02cp"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_go701"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.21007937, 0.9776843, 0, -0.9776843, -0.21007937, 0, 20.114983, 0)
+
+[node name="floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(20, 1, 20)
+material = SubResource("StandardMaterial3D_yp4wr")
+
+[node name="cargo" type="CSGBox3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.427916)
+size = Vector3(5, 1, 5)
+material = SubResource("StandardMaterial3D_a02cp")
+
+[node name="shop" type="CSGBox3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.507145)
+size = Vector3(5, 1, 5)
+material = SubResource("StandardMaterial3D_go701")
+
+[node name="Player" parent="." instance=ExtResource("1_a02cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43449402, 2.3271365, -0.453162)
+
+[node name="Cargobox" parent="." instance=ExtResource("2_go701")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18813515, 0.7500005, -12.547067)
+
+[node name="Cargobox2" parent="." instance=ExtResource("2_go701")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.343966, 0.7499995, -11.25275)
+
+[node name="Cargobox3" parent="." instance=ExtResource("2_go701")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5322399, 0.7499995, -13.699821)
