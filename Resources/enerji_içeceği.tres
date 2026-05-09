@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c6h75twh33db8"]
+
+[ext_resource type="Script" uid="uid://b2k1gbuj08jxl" path="res://Resources/item_data.gd" id="1_6qfgc"]
+[ext_resource type="PackedScene" uid="uid://1x0c2ee6mthw" path="res://Models/Soda.glb" id="1_a2doq"]
+
+[resource]
+script = ExtResource("1_6qfgc")
+itemname = "Enerji İçeceği"
+base_price = 27.5
+model = ExtResource("1_a2doq")
+item_spacing = Vector3(0.01, 0.01, 0.01)
+metadata/_custom_type_script = "uid://b2k1gbuj08jxl"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://di2whhwghdcxe"]
+
+[ext_resource type="Script" uid="uid://b2k1gbuj08jxl" path="res://Resources/item_data.gd" id="1_cua5w"]
+
+[resource]
+script = ExtResource("1_cua5w")
+itemname = "Elf Ekmeği"
+base_price = 15.5
+metadata/_custom_type_script = "uid://b2k1gbuj08jxl"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1qvfo2utvgsp"]
+
+[ext_resource type="PackedScene" uid="uid://cda6b30838bad" path="res://Models/CargoBox.glb" id="1_0ujf3"]
+
+[node name="MainCargoBox" instance=ExtResource("1_0ujf3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Skeleton3D" parent="CargoBox" index="0"]
+bones/1/rotation = Quaternion(-0.7071062, 0.0008904655, 0.00089013454, 0.7071063)
+bones/2/position = Vector3(1.75, 0.5000005, -0.85000026)
+bones/2/rotation = Quaternion(0.7071063, -0.00090375793, 0.0009034762, 0.7071062)

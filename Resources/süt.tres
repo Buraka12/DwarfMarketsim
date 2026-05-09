@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://be1cykodo0ra1"]
+
+[ext_resource type="Script" uid="uid://b2k1gbuj08jxl" path="res://Resources/item_data.gd" id="1_awmu3"]
+[ext_resource type="PackedScene" uid="uid://c1vvrcu13odsy" path="res://Models/Milk.glb" id="1_sylth"]
+
+[resource]
+script = ExtResource("1_awmu3")
+itemname = "Süt"
+base_price = 45.0
+model = ExtResource("1_sylth")
+item_spacing = Vector3(0.01, 0, 0.01)
+metadata/_custom_type_script = "uid://b2k1gbuj08jxl"

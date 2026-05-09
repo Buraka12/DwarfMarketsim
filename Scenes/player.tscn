@@ -10,6 +10,46 @@ height = 1.2
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_v0iea")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Chrossair" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Chrossair"]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextHud" type="Panel" parent="CanvasLayer"]
+visible = false
+custom_minimum_size = Vector2(200, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 33.0
+offset_top = -120.0
+offset_right = 233.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="label" type="Label" parent="CanvasLayer/TextHud"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_qbkls")
 debug_color = Color(0, 0.5950001, 0.7, 0.7294118)
@@ -17,14 +57,22 @@ debug_color = Color(0, 0.5950001, 0.7, 0.7294118)
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36020958, 0)
 
+[node name="InteractionRay" type="RayCast3D" parent="Head" node_paths=PackedStringArray("player_body")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.0345971, 0)
+target_position = Vector3(0, -1.5, 0)
+script = ExtResource("2_cvnsp")
+player_body = NodePath("../..")
+
+[node name="Timer" type="Timer" parent="Head/InteractionRay"]
+wait_time = 0.1
+autostart = true
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 0.91450137, -0.4045831, 0, 0.4045831, 0.91450137, 0, -0.33231524, -0.5865102)
+
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02466458, 0)
 
-[node name="InteractionRay" type="RayCast3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.009932518, 0)
-script = ExtResource("2_cvnsp")
-
-[node name="HoldPosition" type="Marker3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17509651, -1.391001)
-
 [node name="Inventorycomp" type="Node" parent="Head"]
+
+[connection signal="timeout" from="Head/InteractionRay/Timer" to="Head/InteractionRay" method="_on_timer_timeout"]
