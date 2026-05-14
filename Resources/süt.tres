@@ -8,5 +8,5 @@ script = ExtResource("1_awmu3")
 itemname = "Süt"
 base_price = 45.0
 model = ExtResource("1_sylth")
-item_spacing = Vector3(0.01, 0, 0.01)
+item_spacing = Vector3(0.01, 0.01, 0.01)
 metadata/_custom_type_script = "uid://b2k1gbuj08jxl"

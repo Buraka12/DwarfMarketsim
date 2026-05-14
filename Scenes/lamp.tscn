@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bue47jecojft1"]
+
+[ext_resource type="PackedScene" uid="uid://d3xgvuyowi88o" path="res://Models/Lamp.glb" id="1_3b5q5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3b5q5"]
+backlight_enabled = true
+backlight = Color(0.5176471, 0.50980395, 0.3137255, 1)
+
+[node name="Lamp" instance=ExtResource("1_3b5q5")]
+
+[node name="Ampul" parent="Lamb" index="0"]
+cast_shadow = 0
+
+[node name="Cylinder_001" parent="Lamb" index="1"]
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 0, 0, 0)
+material_overlay = SubResource("StandardMaterial3D_3b5q5")
+cast_shadow = 0

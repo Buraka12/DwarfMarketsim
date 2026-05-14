@@ -53,7 +53,6 @@ func _physics_process(delta):
 			if box_speed < 4.0: 
 				push_target.apply_central_impulse(push_dir * 1)
 			
-			
 	
 	# ESC
 	if Input.is_action_just_pressed("ui_cancel"):

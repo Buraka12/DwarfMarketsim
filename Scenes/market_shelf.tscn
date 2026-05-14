@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://np2j6gdq7eus"]
+
+[ext_resource type="PackedScene" uid="uid://ccsaf36kjc8m7" path="res://Models/MarketShelf.glb" id="1_k0oel"]
+[ext_resource type="Script" uid="uid://rbirjtghyoe8" path="res://Scripts/market_shelf.gd" id="2_o4ija"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iw461"]
+points = PackedVector3Array(0.25, 0.3, 0.15, 0.25, 0.3, -0.15, -0.25, 0.3, 0.15, 0.25, 0, 0.15, 0.25, 0, -0.15, -0.25, 0.3, -0.15, -0.25, 0, 0.15, -0.25, 0, -0.15)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5st0q"]
+points = PackedVector3Array(0.25, 0.3, 0.15, 0.25, 0.3, -0.15, -0.25, 0.3, 0.15, 0.25, 0, 0.15, 0.25, 0, -0.15, -0.25, 0.3, -0.15, -0.25, 0, 0.15, -0.25, 0, -0.15)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ibog3"]
+points = PackedVector3Array(0.25, 0.3, 0.15, 0.25, 0.3, -0.15, -0.25, 0.3, 0.15, 0.25, 0, 0.15, 0.25, 0, -0.15, -0.25, 0.3, -0.15, -0.25, 0, 0.15, -0.25, 0, -0.15)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_26ry0"]
+points = PackedVector3Array(0.25, 0.3, 0.15, 0.25, 0.3, -0.15, -0.25, 0.3, 0.15, 0.25, 0, 0.15, 0.25, 0, -0.15, -0.25, 0.3, -0.15, -0.25, 0, 0.15, -0.25, 0, -0.15)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ssdm8"]
+points = PackedVector3Array(0.25, 0.3, 0.15, 0.25, 0.3, -0.15, -0.25, 0.3, 0.15, 0.25, 0, 0.15, 0.25, 0, -0.15, -0.25, 0.3, -0.15, -0.25, 0, 0.15, -0.25, 0, -0.15)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_u8qjf"]
+points = PackedVector3Array(0.25, 0.3, 0.15, 0.25, 0.3, -0.15, -0.25, 0.3, 0.15, 0.25, 0, 0.15, 0.25, 0, -0.15, -0.25, 0.3, -0.15, -0.25, 0, 0.15, -0.25, 0, -0.15)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4jn2b"]
+points = PackedVector3Array(0.25, 0.3, 0.15, 0.25, 0.3, -0.15, -0.25, 0.3, 0.15, 0.25, 0, 0.15, 0.25, 0, -0.15, -0.25, 0.3, -0.15, -0.25, 0, 0.15, -0.25, 0, -0.15)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_edyrj"]
+points = PackedVector3Array(0.25, 0.3, 0.15, 0.25, 0.3, -0.15, -0.25, 0.3, 0.15, 0.25, 0, 0.15, 0.25, 0, -0.15, -0.25, 0.3, -0.15, -0.25, 0, 0.15, -0.25, 0, -0.15)
+
+[node name="MarketShelf" instance=ExtResource("1_k0oel")]
+script = ExtResource("2_o4ija")
+
+[node name="ProductZone" parent="Market Shelf" index="0"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Market Shelf/ProductZone" index="0" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Market Shelf/ProductZone/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_iw461")
+
+[node name="ProductZone_001" parent="Market Shelf" index="1"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Market Shelf/ProductZone_001" index="0" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Market Shelf/ProductZone_001/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_5st0q")
+
+[node name="ProductZone_002" parent="Market Shelf" index="2"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Market Shelf/ProductZone_002" index="0" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Market Shelf/ProductZone_002/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_ibog3")
+
+[node name="ProductZone_003" parent="Market Shelf" index="3"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Market Shelf/ProductZone_003" index="0" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Market Shelf/ProductZone_003/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_26ry0")
+
+[node name="ProductZone_004" parent="Market Shelf" index="4"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Market Shelf/ProductZone_004" index="0" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Market Shelf/ProductZone_004/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_ssdm8")
+
+[node name="ProductZone_005" parent="Market Shelf" index="5"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Market Shelf/ProductZone_005" index="0" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Market Shelf/ProductZone_005/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_u8qjf")
+
+[node name="ProductZone_006" parent="Market Shelf" index="6"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Market Shelf/ProductZone_006" index="0" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Market Shelf/ProductZone_006/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_4jn2b")
+
+[node name="ProductZone_007" parent="Market Shelf" index="7"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Market Shelf/ProductZone_007" index="0" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Market Shelf/ProductZone_007/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_edyrj")
