@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://1x0c2ee6mthw"
-path="res://.godot/imported/Soda.glb-e4f2b9bd3fb810922520f348ed1112b2.scn"
+uid="uid://drx75hhielhte"
+path="res://.godot/imported/Lamp.glb-a9c34244275e2ad16ffaa61d1e802ed5.scn"
 
 [deps]
 
-source_file="res://Models/Soda.glb"
-dest_files=["res://.godot/imported/Soda.glb-e4f2b9bd3fb810922520f348ed1112b2.scn"]
+source_file="res://Models/Furnitures/Lamp.glb"
+dest_files=["res://.godot/imported/Lamp.glb-a9c34244275e2ad16ffaa61d1e802ed5.scn"]
 
 [params]
 

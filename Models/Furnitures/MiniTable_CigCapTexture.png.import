@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy0wpmnl830k6"
-path.s3tc="res://.godot/imported/Milk_MilkTexture.png-85e8321757a8c265174bb2e9e4665557.s3tc.ctex"
+uid="uid://ccmp5ndocxmnq"
+path.s3tc="res://.godot/imported/MiniTable_CigCapTexture.png-5bc0620c3457bf43d34bec11585f2a21.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "a65c34cf25b7dead720482fd951522e7"
+"md5": "178ad8a764adc4e342d35c583e8dfc81"
 }
 
 [deps]
 
-source_file="res://Models/Milk_MilkTexture.png"
-dest_files=["res://.godot/imported/Milk_MilkTexture.png-85e8321757a8c265174bb2e9e4665557.s3tc.ctex"]
+source_file="res://Models/Furnitures/MiniTable_CigCapTexture.png"
+dest_files=["res://.godot/imported/MiniTable_CigCapTexture.png-5bc0620c3457bf43d34bec11585f2a21.s3tc.ctex"]
 
 [params]
 

@@ -2,9 +2,11 @@ extends CharacterBody3D
 
 @onready var head = $Head
 
-const SPEED = 6.0 
+const SPEED = 5.0
+const ACCELERATION = 10.0
+const FRICTION = 10.0     
 const JUMP_VELOCITY = 3.5
-var mouse_sensitivity = 0.002 
+var mouse_sensitivity = 0.004
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var zoom = false
 
@@ -26,15 +28,18 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
+	# YENİ HAREKET FİZİĞİ (İvme ve Sürtünme)
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		# Aniden SPEED'e eşitlemek yerine, yavaşça SPEED'e doğru lerp'liyoruz
+		velocity.x = lerp(velocity.x, direction.x * SPEED, ACCELERATION * delta)
+		velocity.z = lerp(velocity.z, direction.z * SPEED, ACCELERATION * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = 	move_toward(velocity.z, 0, SPEED)
-
+		# Elimizi tuştan çektiğimizde aniden 0'a eşitlemek yerine yavaşça durduruyoruz (Fren)
+		velocity.x = lerp(velocity.x, 0.0, FRICTION * delta)
+		velocity.z = lerp(velocity.z, 0.0, FRICTION * delta)
+		
 	move_and_slide()
 	var object
 	for i in range(get_slide_collision_count()):

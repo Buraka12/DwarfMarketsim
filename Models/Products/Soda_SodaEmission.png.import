@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ncxnf0yljem8"
-path.s3tc="res://.godot/imported/Soda_SodaRougness.png-3c70d8502b9b7593cc4a9cd8c1b3dbf5.s3tc.ctex"
+uid="uid://o7sya4ipakru"
+path.s3tc="res://.godot/imported/Soda_SodaEmission.png-bd1c81976c2590294253004817999142.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "6ce138c35f9c34f169242658d224064f"
+"md5": "3681f442bd1d650fc4a77c1dc3d649ca"
 }
 
 [deps]
 
-source_file="res://Models/Soda_SodaRougness.png"
-dest_files=["res://.godot/imported/Soda_SodaRougness.png-3c70d8502b9b7593cc4a9cd8c1b3dbf5.s3tc.ctex"]
+source_file="res://Models/Products/Soda_SodaEmission.png"
+dest_files=["res://.godot/imported/Soda_SodaEmission.png-bd1c81976c2590294253004817999142.s3tc.ctex"]
 
 [params]
 

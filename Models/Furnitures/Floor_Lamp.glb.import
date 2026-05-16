@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1vvrcu13odsy"
-path="res://.godot/imported/Milk.glb-dab56f440992b24b49af0a2e5529189e.scn"
+uid="uid://d3xgvuyowi88o"
+path="res://.godot/imported/Floor_Lamp.glb-a1d17653388403f50b4187a5c7e87d95.scn"
 
 [deps]
 
-source_file="res://Models/Milk.glb"
-dest_files=["res://.godot/imported/Milk.glb-dab56f440992b24b49af0a2e5529189e.scn"]
+source_file="res://Models/Furnitures/Floor_Lamp.glb"
+dest_files=["res://.godot/imported/Floor_Lamp.glb-a1d17653388403f50b4187a5c7e87d95.scn"]
 
 [params]
 

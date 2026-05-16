@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bue47jecojft1"]
+
+[ext_resource type="PackedScene" uid="uid://d3xgvuyowi88o" path="res://Models/Floor_Lamp.glb" id="1_3b5q5"]
+[ext_resource type="PackedScene" uid="uid://de2tttegt2yo3" path="res://Scenes/interact_trigger.tscn" id="2_5vngr"]
+[ext_resource type="Script" uid="uid://dhb7o7m1ohu5v" path="res://Scripts/floor_lamp.gd" id="2_xtpkl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3b5q5"]
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
+blend_mode = 3
+emission_enabled = true
+emission = Color(0.98333335, 1, 0, 1)
+emission_energy_multiplier = 16.0
+
+[node name="Floor_lamp" instance=ExtResource("1_3b5q5")]
+script = ExtResource("2_xtpkl")
+
+[node name="Lamb" parent="." index="0"]
+cast_shadow = 0
+
+[node name="Ampul" parent="Lamb" index="0"]
+cast_shadow = 0
+
+[node name="Cylinder_001" parent="Lamb" index="1"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0, 0)
+material_overlay = SubResource("StandardMaterial3D_3b5q5")
+cast_shadow = 0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamb/Cylinder_001" index="0"]
+transform = Transform3D(38.04226, 0, 0, 0, 1.6666666, 0, 0, 0, 40.000004, 0, 1.749501, 0)
+light_color = Color(0.81, 0.81, 0.47790003, 1)
+shadow_enabled = true
+
+[node name="interact_trigger" parent="." index="1" node_paths=PackedStringArray("target_node") instance=ExtResource("2_5vngr")]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0.6808473, 0)
+target_node = NodePath("..")

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpvsgj7bn4l05"
-path.s3tc="res://.godot/imported/Soda_SodaTexture.png-47e1e63aa87e225ba1cbc3335c885616.s3tc.ctex"
+uid="uid://bmrn5flaumplx"
+path.s3tc="res://.godot/imported/Floor_Lamp_MarketShelfTexture.png-8f07a477b3e5180422e5bed86ba62016.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "02762ca5ebf56daaa7c279b24572e3db"
+"md5": "2b626c198f4b056bff29494f3401d3b7"
 }
 
 [deps]
 
-source_file="res://Models/Soda_SodaTexture.png"
-dest_files=["res://.godot/imported/Soda_SodaTexture.png-47e1e63aa87e225ba1cbc3335c885616.s3tc.ctex"]
+source_file="res://Models/Furnitures/Floor_Lamp_MarketShelfTexture.png"
+dest_files=["res://.godot/imported/Floor_Lamp_MarketShelfTexture.png-8f07a477b3e5180422e5bed86ba62016.s3tc.ctex"]
 
 [params]
 

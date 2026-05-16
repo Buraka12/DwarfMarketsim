@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhwl8lyksx737"]
+[gd_scene load_steps=11 format=3 uid="uid://bhwl8lyksx737"]
 
-[ext_resource type="PackedScene" uid="uid://un0y14wnyj4r" path="res://Scenes/player.tscn" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://btek8uapnwo1g" path="res://Scenes/cargobox.tscn" id="2_go701"]
 [ext_resource type="Resource" uid="uid://c6h75twh33db8" path="res://Resources/enerji_içeceği.tres" id="3_5a7ea"]
 [ext_resource type="Resource" uid="uid://be1cykodo0ra1" path="res://Resources/süt.tres" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://np2j6gdq7eus" path="res://Scenes/market_shelf.tscn" id="5_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://bue47jecojft1" path="res://Scenes/floor_lamp.tscn" id="6_5ukr8"]
+[ext_resource type="PackedScene" uid="uid://un0y14wnyj4r" path="res://Scenes/player.tscn" id="6_o06y3"]
 
-[sub_resource type="Environment" id="Environment_go701"]
+[sub_resource type="Environment" id="Environment_k7acu"]
+glow_bloom = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yp4wr"]
 albedo_color = Color(0.544, 1, 0.52, 1)
@@ -19,11 +21,13 @@ albedo_color = Color(1, 0, 0, 1)
 
 [node name="World" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_go701")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 20.114983, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_k7acu")
 
 [node name="floor" type="CSGBox3D" parent="."]
 use_collision = true
@@ -39,9 +43,6 @@ material = SubResource("StandardMaterial3D_a02cp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.507145)
 size = Vector3(5, 1, 5)
 material = SubResource("StandardMaterial3D_go701")
-
-[node name="Player" parent="." instance=ExtResource("1_a02cp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43449402, 2.3271365, -0.453162)
 
 [node name="Cargobox" parent="." instance=ExtResource("2_go701")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18813515, 0.7500005, -12.547067)
@@ -60,3 +61,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.05
 
 [node name="MarketShelf" parent="." instance=ExtResource("5_fo5ed")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.0770097, 0.5, -10.894495)
+
+[node name="Lamp" parent="." instance=ExtResource("6_5ukr8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17010689, 0.540954, -7.9791756)
+
+[node name="Player" parent="." instance=ExtResource("6_o06y3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39205933, 2.7452793, -1.5976872)
